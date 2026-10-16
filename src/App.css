@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 80px;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #0f172a;
+color: white;
+line-height: 1.6;
+ padding-top: 70px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 12px;
+
+  background: #111c32;
+  padding: 15px 20px;
+}
+
+nav h2 {
+  color: #38bdf8;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 0;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.github-icon {
+  flex-shrink: 0;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  nav h2 {
+    font-size: 14px;
+  }
+
+  .github-icon {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+  font-size: 22px;
+}
+
+  .nav-links {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+  .nav-links a {
+    font-size: 12px;
+    margin: 0;
+    padding: 5px 0;
+    white-space: nowrap;
+  }
+
+  body {
+    padding-top: 110px;
+  }
+
+  #home {
+    scroll-margin-top: 110px;
+  }
+}
+.hero {
+min-height: 75vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 40px 20px;
+}
+
+.hero p:first-child {
+color: #38bdf8;
+}
+
+.hero h1 {
+font-size: 56px;
+color: #38bdf8;
+margin: 10px 0;
+}
+
+.hero h3 {
+font-size: 24px;
+margin-bottom: 12px;
+}
+
+.btn {
+margin-top: 24px;
+padding: 12px 25px;
+background: #38bdf8;
+color: #0f172a;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+}
+
+section:not(.hero) {
+padding: 65px 8%;
+text-align: center;
+}
+
+section h2 {
+color: #38bdf8;
+margin-bottom: 20px;
+}
+
+.skills {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.skills span {
+background: #1e293b;
+border: 1px solid #38bdf8;
+padding: 12px 24px;
+border-radius: 8px;
+}
+
+footer {
+text-align: center;
+padding: 25px;
+background: #111c32;
+color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+nav {
+flex-direction: column;
+gap: 12px;
+}
+
+nav a {
+margin: 0 8px;
+}
+
+.hero h1 {
+font-size: 40px;
+}
+
+.hero h3 {
+font-size: 20px;
+}
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  margin-bottom: 20px;
+}
+
+.project-card {
+background: #1e293b;
+padding: 25px;
+margin: 20px auto;
+max-width: 500px;
+border-radius: 12px;
+border: 1px solid #334155;
+}
+
+.project-card h3 {
+color: #38bdf8;
+margin-bottom: 10px;
+}
+
+.project-card:hover {
+border-color: #38bdf8;
+transform: translateY(-5px);
+transition: 0.3s;
+}
+
+.project-card {
+  background: #1e293b;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.project-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  border-color: #38bdf8;
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  color: #38bdf8;
+  padding: 12px 22px;
+  margin: 8px;
+  border-radius: 8px;
+  border: 1px solid #38bdf8;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateY(-5px);
+}
+#about {
+  background: transparent;
+  margin: 30px auto;
+  max-width: 800px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#about p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 650px;
+  margin: 15px auto 0;
+
+}
+#contact {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+#contact p {
+  color: #38bdf8;
+  margin-top: 15px;
+}
+section {
+  scroll-margin-top: 80px;
+  min-height: 100vh;
+  scroll-margin-top: 80px;
+}
+.social-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0 20px;
+}
+
+.social-line {
+  width: 280px;
+  border: none;
+  border-top: 1px solid #64748b;
+  margin: 12px auto;
+}
+
+.social-links h3 {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.social-links a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+#contact a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+#contact .contact-item a {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#contact .social-links .social-item {
+  display: block;
+  width: fit-content;
+  border: 1px dotted #38bdf8;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin: 10px auto;
+  text-align: left;
+}
+
+#contact .social-links .social-item a {
+  border: none;
+  padding: 0;
+}
+#contact p.contact-item {
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px dotted #64748b;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 15px auto 0;
+  box-sizing: border-box;
+}
+#contact .contact-item span {
+  color: #38bdf8 !important;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  min-width: 100px;
+  border: 1px dotted #38bdf8;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.skill i {
+  font-size: 45px;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+}
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #38bdf8;
+}
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  position: relative;
+  top: 15px;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+
+  #home {
+    padding-top: 30px;
+    scroll-margin-top: 80px;
+  }
+}
